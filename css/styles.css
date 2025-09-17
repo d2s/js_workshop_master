@@ -8,17 +8,10 @@
 		margin: 20px;
 	}
 
-	h1:before {
-		content: "R0331 - Dynamic Web Applications with JavaScript";
-		display: block;
-		font-size: 60%;
-		font-style: italic;
-	}
-
 	h1 {
 		height: 60px;
 		background: url("../img/js-logo.png") no-repeat right top;
-		color: #dc0614;
+		color: #000;
 		text-shadow: 1px 1px 1px #1966a2;
 	}
 
