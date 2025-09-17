@@ -3,20 +3,51 @@
 
 @layer defaults {
 	body {
-		font-family: "Trebuchet MS", Helvetica, sans-serif;
-		color: #333333;
+		font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua,
+			Georgia, serif;
+		color: #000;
+		background-color: #fff;
 		margin: 20px;
 	}
 
 	h1 {
-		height: 60px;
-		background: url("../img/js-logo.png") no-repeat right top;
-		color: #000;
-		text-shadow: 1px 1px 1px #1966a2;
+		font-size: 32px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 700;
+		line-height: 32px;
 	}
 
-	h2 {
-		color: #1966a2;
+	h3 {
+		font-size: 25px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 700;
+		line-height: 32px;
+	}
+
+	p {
+		font-size: 20px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 400;
+		line-height: 32px;
+	}
+
+	blockquote {
+		font-size: 25px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 400;
+		line-height: 32px;
+	}
+
+	pre {
+		font-size: 16px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 400;
+		line-height: 32px;
 	}
 
 	hr {
