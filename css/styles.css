@@ -57,14 +57,17 @@ div.border {
     clear: both;
 }
 
-.ws3 div,
-.ws4.div {
-    width: 200px;
-    height: 100px;
-    border: 1px solid black;
+table.display {
+    width: 100%;
 }
 
 .ws3 {
+    div {
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+    }
+
     table,
     tr,
     td {
@@ -83,11 +86,13 @@ div.border {
     }
 }
 
-table.display {
-    width: 100%;
-}
-
 .ws4 {
+    div {
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+    }
+
     img {
         position: relative;
         left:0px;
@@ -167,7 +172,7 @@ table.display {
     }
     
     tr:nth-child(even) {
-        background-color: #f2f2f2
+        background-color: #f2f2f2;
     }
     
     th,
@@ -186,14 +191,6 @@ table.display {
     }
 }
 
-
-#jsondata,
-#rawdata,
-#weatherdata {
-    border: 1px solid black;
-    padding: 10px;
-}
-
 .ws9 {
     div {
         width: 200px;
@@ -206,6 +203,13 @@ table.display {
         height: auto;
         border: 0;
     }
+}
+
+#jsondata,
+#rawdata,
+#weatherdata {
+    border: 1px solid black;
+    padding: 10px;
 }
 
 #ajax {
