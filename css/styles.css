@@ -8,6 +8,8 @@
 		color: #000;
 		background-color: #fff;
 		margin: 20px;
+		font-size: 20px;
+		line-height: 1.6;
 	}
 
 	h1 {
@@ -15,7 +17,6 @@
 		font-style: normal;
 		font-variant: normal;
 		font-weight: 700;
-		line-height: 1.6;
 	}
 
 	h3 {
@@ -23,7 +24,6 @@
 		font-style: normal;
 		font-variant: normal;
 		font-weight: 700;
-		line-height: 1.6;
 	}
 
 	p {
@@ -31,7 +31,6 @@
 		font-style: normal;
 		font-variant: normal;
 		font-weight: 400;
-		line-height: 1.6;
 	}
 
 	blockquote {
@@ -39,7 +38,6 @@
 		font-style: normal;
 		font-variant: normal;
 		font-weight: 400;
-		line-height: 1.6;
 	}
 
 	pre {
@@ -47,7 +45,6 @@
 		font-style: normal;
 		font-variant: normal;
 		font-weight: 400;
-		line-height: 1.6;
 	}
 
 	hr {
