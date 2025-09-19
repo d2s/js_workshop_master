@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Workshop 1: JavaScript</title>
+		<link rel="stylesheet" href="../css/styles.css" />
+	</head>
+
+	<body>
+		<h1>Workshop 1: Age difference calculations</h1>
+		<p><a href="../index.html">Back to landing page</a></p>
+
+		<p>Check developer console for details (with <code>F12</code>).</p>
+
+		<script>
+			// Extra: Age difference calculations
+			let thisYear = 2025;
+			let yourAge = 25;
+			let theirAge = 23;
+			let yearBornIn = thisYear - yourAge;
+			let yearBornInThey = thisYear - theirAge;
+			let ageDifference = Math.abs(yourAge - theirAge);
+
+			const infoYourAge = " and your age is ";
+			const infoTheirAge = " and their age is ";
+			const infoYearBornIn = "were born during the year ";
+			const infoAgeDifference = "Age difference between you and them is ";
+
+			console.info("Age difference calculations")
+			console.log("You " + infoYearBornIn + yearBornIn + infoYourAge + yourAge + ".");
+			console.log("They " + infoYearBornIn + yearBornInThey + infoTheirAge + theirAge + ".");
+			console.log(infoAgeDifference + ageDifference + " years.");
+
+		</script>
+	</body>
+</html>
