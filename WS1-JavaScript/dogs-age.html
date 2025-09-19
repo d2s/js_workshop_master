@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Workshop 1: JavaScript</title>
+		<link rel="stylesheet" href="../css/styles.css" />
+	</head>
+
+	<body>
+		<h1>Workshop 1: Exercise 1: Dog's Age</h1>
+		<p><a href="../index.html">Back to landing page</a></p>
+
+		<div>Age calculations for comparing how many dog years a human is, and also for comparing how many human years a dog is.</div>
+
+		<p>Check developer console for details (with <code>F12</code>).</p>
+
+		<section>
+			<h2>Additional documentation</h2>
+			<ul>
+				<li>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round">Math.round() - JavaScript | MDN</a>
+				</li>
+			</ul>
+		</section>
+
+		<script>
+			// Dog's age calculations
+			let humanAge = 25;
+			let dogAge = 5;
+			let dogAgeInHumanYears = Math.round(dogAge * 7);
+			let humanAgeInDogYears = Math.round(humanAge / 7);
+			let ageDifferenceDog = Math.abs(humanAgeInDogYears - dogAge);
+			let ageDifferenceHuman = Math.abs(humanAge - dogAgeInHumanYears);
+
+			const infoHumanAge = "Human's age is ";
+			const infoDogAge = "Dog's age is ";
+			const infoHumanYears = " human years";
+			const infoDogYears = " dog years";
+			const infoAnd = " and ";
+			const infoEnd = ".";
+
+			const infoAgeDifference = "Age difference between human and the dog is ";
+
+			const infoIntroText = "Age difference calculations between human and a dog.";
+			const infoAgeCalculationHuman = infoHumanAge + humanAgeInDogYears + infoDogYears + infoAnd + humanAge + infoHumanYears + infoEnd;
+			const infoAgeCalculationDog = infoDogAge + dogAge + infoDogYears + infoAnd + dogAgeInHumanYears + infoHumanYears + infoEnd;
+			const infoAgeDifferenceCalculation = infoAgeDifference + ageDifferenceDog + infoDogYears + infoAnd + ageDifferenceHuman + infoHumanYears + infoEnd;
+
+			console.info(infoIntroText)
+			console.log(infoAgeCalculationHuman);
+			console.log(infoAgeCalculationDog);
+			console.log(infoAgeDifferenceCalculation);
+
+			/**
+			 * AVOID USING document.write();
+			 * because it can cause security issues!
+			 *
+			 * Better solution would be to use:
+			 * - https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement
+			 * - https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentText
+			 */
+			// document.write(infoIntroText)
+			// document.write(infoAgeCalculationHuman);
+			// document.write(infoAgeCalculationDog);
+			// document.write(infoAgeDifferenceCalculation);
+
+		</script>
+	</body>
+</html>
