@@ -4,15 +4,15 @@
 
 ## Workshops
 
-- [Workshop 1](Workshop1_example1-1.html)
-- [Workshop 2](workshop2.html)
-- [Workshop 3](workshop3.html)
-- [Workshop 4](workshop4.html)
-- [Workshop 5](workshop5.html)
-- [Workshop 6](workshop6.html)
-- [Workshop 7](workshop7.html)
-- [Workshop 8](workshop8.html)
-- [Workshop 9](workshop9.html)
+- [Workshop 1](WS1-JavaScript/Workshop1_example1-1.html)
+- [Workshop 2](WS2-JavaScript-BOM/workshop2.html)
+- [Workshop 3](WS3-JavaScript-Events/workshop3.html)
+- [Workshop 4](WS4-DOM-Scripting/workshop4.html)
+- [Workshop 5](WS5-Smart-Forms/workshop5.html)
+- [Workshop 6](WS6-localStorage/workshop6.html)
+- [Workshop 7](WS7-AJAX/workshop7.html)
+- [Workshop 8](WS8-JSON/workshop8.html)
+- [Workshop 9](WS9-jQuery/workshop9.html)
 
 ## About this repository
 
