@@ -19,8 +19,8 @@
 			let i = 5
 			let j = 10
 			let k = 25;
-			let l = "Joe";
 			// Fix: "Joe is not defined", added quotes around the text.
+			let l = "Joe";
 			const arr = [3, 5, 7];
 
 			if (i < j) {
@@ -28,11 +28,13 @@
 			} else if (j > k) {
 				console.log("k");
 			} else {
-				console.log("j");
 				// Fix: Added missing text quote character.
+				console.log("j");
 			}
 
-			for (let i = 0; i <= 3; ++i) {
+			// Fix: changed loop length from 3 to 2,
+			// as JavaScript arrays start from 0, not from 1.
+			for (let i = 0; i <= 2; ++i) {
 					console.log(arr[i]);
 			}
 		</script>
