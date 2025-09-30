@@ -52,12 +52,22 @@
 	}
 
 	section {
-		border-top: 2px solid #1966a2;
 		padding: 1rem 0;
 	}
 }
 
 @layer components {
+	/* Output wrapper for assignments */
+	section.exerciseOutput {
+		background-color: #f2f2f2;
+		padding: 3ex 2ex;
+		box-shadow: inset 0 0 2ex rgba(0,0,0,0.06);
+		border-left: 2px solid #1966a2;
+		border-right: 2px solid #1966a2;
+		margin-left: -2ex;
+		margin-right: -2ex;
+	}
+
 	.red-box {
 		background: red;
 		width: 50px;
