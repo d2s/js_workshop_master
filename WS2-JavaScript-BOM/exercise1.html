@@ -9,10 +9,60 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
+
+		<style>
+			@layer components {
+				figure {
+					margin: 0;
+					padding: 2ex 2ex 1.3ex;
+					max-width: 50ex;
+					background-color: antiquewhite;
+					color: black;
+    			display: grid;
+					font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+					border: 0.1ex solid darkgrey;
+					border-radius: 0.5ex;
+					box-shadow: inset 0 0 2ex rgba(0,0,0,0.04);
+				}
+
+				figcaption {
+					font-weight: 400;
+					text-align: end;
+				}
+
+				blockquote {
+					margin: 0;
+					font-family: 'Courier New', Courier, monospace;
+
+					p {
+						margin-block-start: 0;
+      			margin-block-end: 0;
+						font-weight: 600;
+						text-align: start;
+					}
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<h1>Workshop 2: Exercise 1</h1>
 		<p><a href="index.html">Back to Workshop 2 index</a></p>
+
+		<section class="exerciseOutput">
+			<!--
+				Blockquote structure partially based on example from:
+				- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/blockquote
+
+				Figure structure based on:
+				- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figure#quotations
+			-->
+			<figure id="figureTarget">
+				<blockquote id="">
+					<p id="quoteTarget">#quoteTarget</p>
+				</blockquote>
+				<figcaption id="authorTarget">#authorTarget</figcaption>
+			</figure>
+		</section>
 
 		<section>
 			<h2>Exercise 1</h2>
@@ -21,19 +71,18 @@
 				the following text on the browser page. Use HTML-tags to produce the
 				text styles to the page. <br />
 				<br />
-				<em
-					><strong
+				<em>
+					<strong
 						>"If I had nine hours to chop down a tree, I'd spend the first six
-						sharpening my ax."</strong
-					>
+						sharpening my ax."</strong>
 					<br />
-					-- Abraham Lincoln</em
-				>
+					-- Abraham Lincoln</em>
 			</p>
 		</section>
 
-		<script>
-			<!-- JavaScript goes here -->
-		</script>
+		<!--
+			JavaScript should be at the end to make sure that it can access DOM.
+		 -->
+		<script src="ws2-scripts/ws2-ex1.js"></script>
 	</body>
 </html>
