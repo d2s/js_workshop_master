@@ -33,11 +33,40 @@
 		font-weight: 400;
 	}
 
+	figure {
+		margin: 0;
+		padding: 2ex 2ex 1.3ex;
+		max-width: 50ex;
+		background-color: antiquewhite;
+		color: black;
+		display: grid;
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		border: 0.1ex solid darkgrey;
+		border-radius: 0.5ex;
+		box-shadow: inset 0 0 2ex rgba(0, 0, 0, 0.04);
+	}
+
+	figcaption {
+		font-weight: 400;
+		text-align: end;
+	}
+
 	blockquote {
+		margin: 0;
 		font-size: 25px;
 		font-style: normal;
 		font-variant: normal;
 		font-weight: 400;
+		font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+			Liberation Mono, Courier New, 'Courier New', Courier, monospace;
+
+		p {
+			margin-block-start: 0;
+			margin-block-end: 0;
+			font-weight: 600;
+			text-align: start;
+		}
 	}
 
 	pre {
@@ -56,12 +85,20 @@
 	}
 }
 
+@layer patterns {
+	/* Monospace typeface */
+	.font-mono {
+		font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+			Liberation Mono, Courier New, monospace;
+	}
+}
+
 @layer components {
 	/* Output wrapper for assignments */
 	section.exerciseOutput {
 		background-color: #f2f2f2;
 		padding: 3ex 2ex;
-		box-shadow: inset 0 0 2ex rgba(0,0,0,0.06);
+		box-shadow: inset 0 0 2ex rgba(0, 0, 0, 0.06);
 		border-left: 2px solid #1966a2;
 		border-right: 2px solid #1966a2;
 		margin-left: -2ex;
