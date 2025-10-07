@@ -4,9 +4,9 @@
  * More details:
  * - https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
  */
-let figureTarget = document.querySelector("#js-figureTarget");
-let quoteTarget = document.querySelector("#js-quoteTarget");
-let authorTarget = document.querySelector("#js-authorTarget");
+const figureTarget = document.querySelector("#js-figureTarget");
+const quoteTarget = document.querySelector("#js-quoteTarget");
+const authorTarget = document.querySelector("#js-authorTarget");
 
 // console.info("quoteTarget before modification: " + quoteTarget);
 // console.log(quoteTarget);
