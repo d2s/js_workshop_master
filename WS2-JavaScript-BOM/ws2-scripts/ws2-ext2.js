@@ -5,6 +5,8 @@
  *
  * - https://developer.mozilla.org/en-US/docs/Web/API/Document/write
  * - https://developer.mozilla.org/en-US/docs/Web/API/Document/writeln
+ * - https://csswizardry.com/2023/01/why-not-document-write/
+ * -
  */
 
 /**
@@ -14,6 +16,7 @@
  * - https://github.com/cure53/DOMPurify
  * - https://github.com/cure53/DOMPurify/wiki/Security-Goals-&-Threat-Model
  * - https://github.com/cure53/DOMPurify/releases/tag/3.2.7
+ * - https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html
  */
 
 /**
