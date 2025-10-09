@@ -1,0 +1,25 @@
+/* Workshop 3 */
+.ws3 {
+	div {
+		width: 200px;
+		height: 100px;
+		border: 1px solid black;
+	}
+
+	table,
+	tr,
+	td {
+		margin: 10px;
+		padding: 10px;
+	}
+
+	table,
+	tr,
+	td,
+	th {
+		border: 1px solid gray;
+		width: 50%;
+		border-collapse: collapse;
+		padding: 5px;
+	}
+}

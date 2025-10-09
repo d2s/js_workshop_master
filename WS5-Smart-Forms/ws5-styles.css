@@ -1,0 +1,28 @@
+/* Workshop 5 */
+.ws5 {
+	table,
+	&.tr,
+	&.td {
+		border: 1px solid gray;
+		width: 50%;
+		border-collapse: collapse;
+		padding: 5px;
+	}
+
+	div {
+		width: 200px;
+		margin: 20px;
+		padding: 20px;
+		border: 1px solid black;
+	}
+
+	span {
+		display: none;
+	}
+
+	.error {
+		span {
+			display: block;
+		}
+	}
+}

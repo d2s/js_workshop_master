@@ -1,0 +1,13 @@
+/* Workshop 4 */
+.ws4 {
+	div {
+		width: 200px;
+		height: 100px;
+		border: 1px solid black;
+	}
+
+	img {
+		position: relative;
+		left: 0px;
+	}
+}

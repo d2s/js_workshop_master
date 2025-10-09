@@ -1,17 +1,48 @@
-/* div {
-	width: 200px;
-	height: 100px;
-	border: 1px solid black;
-} */
+/* Workshop 9 */
+.ws9 {
+	div {
+		width: 200px;
+		height: 100px;
+		border: 1px solid black;
+	}
 
-/* table,
-tr,
-td {
-	border: 1px solid gray;
-	width: 50%;
-} */
+	#main-content {
+		width: 100%;
+		height: auto;
+		border: 0;
+	}
 
-/* img {
-	position: relative;
-	left: 0px;
-} */
+	#jsondata,
+	#rawdata,
+	#weatherdata {
+		border: 1px solid black;
+		padding: 10px;
+	}
+
+	#ajax {
+		width: 80%;
+		height: 500px;
+		border: 1px solid black;
+		overflow: auto;
+		padding: 20px;
+	}
+
+	/* div {
+		width: 200px;
+		height: 100px;
+		border: 1px solid black;
+	} */
+
+	/* table,
+	tr,
+	td {
+		border: 1px solid gray;
+		width: 50%;
+	} */
+
+	/* img {
+		position: relative;
+		left: 0px;
+	} */
+}
+

@@ -1,0 +1,13 @@
+/* Workshop 6 */
+.ws6 {
+	div {
+		margin-bottom: 10px;
+	}
+
+	table,
+	tr,
+	td {
+		border: 1px solid gray;
+		width: 50%;
+	}
+}
