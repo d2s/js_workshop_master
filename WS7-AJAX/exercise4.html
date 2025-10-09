@@ -11,7 +11,7 @@
 		<link rel="manifest" href="/site.webmanifest">
 	</head>
 	<body>
-		<h1>Workshop 7: Exercise 4: TITLE</h1>
+		<h1>Workshop 7: Exercise 4: AJAX call to a live newsfeed</h1>
 		<p><a href="index.html">Back to Workshop 7 index</a></p>
 
 		<section class="exerciseOutput" id="js-exerciseOutput">
@@ -19,10 +19,48 @@
 		</section>
 
 		<section>
-			<h2>ExerciseTitle</h2>
+			<h2>Exercise 4: AJAX call to a live newsfeed</h2>
 			<p>
-				ExerciseDescription
+				Next try fetching data from a web service. Use either Yahoo news feed
+				<a
+					href="https://meijastiina.github.io/news_rss_topstories.xml"
+					target="_blank"
+					>https://meijastiina.github.io/news_rss_topstories.xml</a
+				>
+				(downloaded from
+				<a href="https://news.yahoo.com/rss/topstories" target="_blank"
+					>https://news.yahoo.com/rss/topstories</a
+				>, security restriction do not allow sending AJAX calls to Yahoo) or a
+				Finnish one (<a
+					href="http://www.iltalehti.fi/rss/uutiset.xml"
+					target="_blank"
+					>http://www.iltalehti.fi/rss/uutiset.xml</a
+				>).
 			</p>
+			<p>
+				Parse the results and display on page below as a list. You can add link to
+				the original news item as well.
+			</p>
+			<ul>
+				<li>News heading 1</li>
+				<li>News heading 2</li>
+				<li><a href="#">News heading 3</a></li>
+			</ul>
+			<input
+				type="button"
+				name="Fetch3"
+				id="Fetch3b"
+				value="Load YAHOO newsfeed"
+				onclick="loadAndParseNews('https://www.yahoo.com/news/rss/')"
+			/>
+			<input
+				type="button"
+				name="Fetch3"
+				id="Fetch3c"
+				value="Load Iltalehti Newsfeed"
+				onclick="loadAndParseNews('http://www.iltalehti.fi/rss/uutiset.xml')"
+			/>
+			<div id="newsfeed"></div>
 		</section>
 
 		<script src="ws7-scripts/ws7-ext4.js"></script>

@@ -11,7 +11,7 @@
 		<link rel="manifest" href="/site.webmanifest">
 	</head>
 	<body>
-		<h1>Workshop 8: Exercise 2: TITLE</h1>
+		<h1>Workshop 8: Exercise 2: Parsing JSON from web</h1>
 		<p><a href="index.html">Back to Workshop 8 index</a></p>
 
 		<section class="exerciseOutput" id="js-exerciseOutput">
@@ -19,10 +19,37 @@
 		</section>
 
 		<section>
-			<h2>ExerciseTitle</h2>
+			<h2>Exercise 2: Parsing JSON from web</h2>
 			<p>
-				ExerciseDescription
+				Below you see two buttons. Edit the source code and add onClick-events to
+				these buttons. Add functionality to these as described below.
 			</p>
+			<p>
+				<button>Load raw data</button>
+				<button>Load and parse the data</button>
+			</p>
+
+			<ul>
+				<li>
+					The first button should run a JavaScript-function, which will load the
+					given
+					<a href="http://www.omdbapi.com/?s=star+wars&apikey=cbbc6750"
+						>JSON file from the web </a
+					>and display the raw contents of it on the DIV-below (id=rawdata). Use
+					Developer tools (F12) to track the AJAX call and study the headers,
+					execution times etc.
+				</li>
+				<li>
+					The second button should run a function, will load the same data, but
+					will parse the data out and display it as a table.
+				</li>
+				<li>
+					After you have managed to get the data out, try to load the pictures to
+					the page as well.
+				</li>
+			</ul>
+
+			<div id="rawdata">Raw data goes here.</div>
 		</section>
 
 		<script src="ws8-scripts/ws8-ext2.js"></script>

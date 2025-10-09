@@ -11,7 +11,7 @@
 		<link rel="manifest" href="/site.webmanifest">
 	</head>
 	<body>
-		<h1>Workshop 7: Exercise 1: TITLE</h1>
+		<h1>Workshop 7: Exercise 1: Parsing XML data</h1>
 		<p><a href="index.html">Back to Workshop 7 index</a></p>
 
 		<section class="exerciseOutput" id="js-exerciseOutput">
@@ -19,10 +19,58 @@
 		</section>
 
 		<section>
-			<h2>ExerciseTitle</h2>
+			<h2>Exercise 1: Parsing XML data</h2>
 			<p>
-				ExerciseDescription
+				This page has XML data embedded into it. See page source, line 78. The
+				browser cannot display it properly, but it's there. Below you can also see
+				the structure data.
 			</p>
+			<p>
+				Write a function called parseData(), which will output the quote and
+				author tags from XML when button is clicked. Hint: Use
+				document.getElementsByTagName() function. See PowerPoint for reference.
+			</p>
+
+			<input
+				type="button"
+				name="Fetch"
+				id="Fetch"
+				value="Button"
+				onclick="parseData()"
+			/>
+			<pre>
+				<!-- THIS IS HERE ONLY FOR DISPLAYing THE STRUCTURE OF THE XML DATA IN THE BROWSER -->
+				&lt;quotes&gt;
+					&lt;quote&gt;I&#39;m not concerned about all hell breaking loose, but that a PART of hell will break loose... it&#39;ll be much harder to detect.&lt;/quote&gt;
+					&lt;length&gt;124&lt;/length&gt;
+					&lt;author&gt;George Carlin&lt;/author&gt;
+					&lt;/quotes&gt;
+					&lt;quotes&gt;
+					&lt;quote&gt;The biggest problem with every art is by the use of appearance to create a loftier reality. &lt;/quote&gt;
+					&lt;author&gt;Johann Wolfgang von Goethe&lt;/author&gt;
+				&lt;/quotes&gt;
+
+				<!-- END -->
+
+				<!-- THIS IS THE START OF XML DATA -->
+			</pre>
+			<quotes>
+				<quote
+					>I'm not concerned about all hell breaking loose, but that a PART of
+					hell will break loose... it'll be much harder to detect.</quote
+				>
+				<length>124</length>
+				<author>George Carlin</author>
+			</quotes>
+			<quotes>
+				<quote
+					>The biggest problem with every art is by the use of appearance to
+					create a loftier reality.
+				</quote>
+				<author>Johann Wolfgang von Goethe</author>
+			</quotes>
+			<!-- THIS IS THE END  OF XML DATA -->
+
 		</section>
 
 		<script src="ws7-scripts/ws7-ext1.js"></script>

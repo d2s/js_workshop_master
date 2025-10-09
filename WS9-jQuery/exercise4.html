@@ -19,10 +19,33 @@
 		</section>
 
 		<section>
-			<h2>ExerciseTitle</h2>
+			<h2>Exercise 4: Ajax</h2>
+			<ol>
+				<li>
+					First try Ajax with console. Use load() -function to inject content from
+					the web (ex.
+					<a
+						href="https://meijastiina.github.io/news_rss_topstories.xml"
+						target="_blank"
+						>https://meijastiina.github.io/news_rss_topstories.xml</a
+					>) into the div below.
+				</li>
+				<li>
+					Then write a JavaScript function, which will fire when the pulldown menu
+					item is changed. Each selection loads a different content from web to
+					the div below.
+				</li>
+				<li>Change the pulldown item names accordingly as well.</li>
+			</ol>
+			<p>Select an item from the list.</p>
 			<p>
-				ExerciseDescription
+				<select name="mySelect" id="mySelect" onchange="">
+					<option value="first">First item</option>
+					<option value="second">Second item</option>
+					<option value="third">Third item</option>
+				</select>
 			</p>
+			<div id="ajax" style="border: 1px solid black; width: 400px"></div>
 		</section>
 
 		<script src="ws9-scripts/ws9-ext4.js"></script>
