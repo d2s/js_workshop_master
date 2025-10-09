@@ -135,9 +135,10 @@
 
 	button,
 	input:where([type="submit"], [type="reset"], [type="button"]) {
-		background: CanvasText;
-		color: Canvas;
+		/* background: CanvasText; */
+		/* color: Canvas; */
 		border: 1px solid transparent;
+		border-radius: 0.3ex;
 	}
 
 	textarea {
