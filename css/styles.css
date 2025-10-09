@@ -57,7 +57,7 @@
 	}
 
 	a {
-		color: oklch(0.68 0.17 228);
+		color: oklch(0.50 0.17 228);
 		text-underline-offset: 2px;
 		&:not(:is(:hover, :focus)) {
 			text-decoration-color: color-mix(in srgb, currentColor, transparent 50%);
@@ -248,7 +248,7 @@
 		font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua,
 			Georgia, serif;
 		color: #000;
-		background-color: #fff;
+		background-color: whitesmoke;
 		font-size: 20px;
 		line-height: 1.6;
 	}
