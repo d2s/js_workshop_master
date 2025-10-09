@@ -320,6 +320,11 @@
 		border: 1px solid #1966a2;
 	}
 
+	header {
+		border-top: 1ex solid rebeccapurple;
+		padding-top: 1ex;
+	}
+
 	section {
 		padding: 1rem 0;
 	}
