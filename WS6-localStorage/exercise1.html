@@ -11,7 +11,7 @@
 		<link rel="manifest" href="/site.webmanifest">
 	</head>
 	<body>
-		<h1>Workshop 6: Exercise 1: TITLE</h1>
+		<h1>Workshop 6: Exercise 1: Saving the entered data</h1>
 		<p><a href="index.html">Back to Workshop 6 index</a></p>
 
 		<section class="exerciseOutput" id="js-exerciseOutput">
@@ -19,10 +19,93 @@
 		</section>
 
 		<section>
-			<h2>ExerciseTitle</h2>
+			<h2>Exercise 1: Saving the entered data</h2>
 			<p>
-				ExerciseDescription
+				Use localStorage to save the data entered to the form fields below. The
+				JavaScript code should read the values entered when the user clicks the
+				button and save the data into localStorage. Use Developer Tools to study
+				what data is saved and how. You can even try to modify this data using
+				the developer tools.
 			</p>
+			<p>
+				<strong
+					>Note: Some versions of Chrome's Web Developer Tools have a known
+					issue with showing localStorage so if nothing is showing up, try with
+					a different browser.</strong
+				>
+			</p>
+			<div>
+				<label for="destination">Destination:</label>
+				<input type="text" name="textfield" id="destination" />
+			</div>
+			<div>
+				<label for="arrival">Arrival Date:</label>
+				<input type="text" name="textfield" id="arrival" />
+			</div>
+			<div id="services" class="border">
+				<p>Services:</p>
+				<div>
+					<label
+						><input
+							type="checkbox"
+							name="CheckboxGroup1"
+							value="Internet"
+							id="CheckboxGroup1_0"
+						/>Internet</label
+					>
+				</div>
+				<div>
+					<label
+						><input
+							type="checkbox"
+							name="CheckboxGroup1"
+							value="AC"
+							id="CheckboxGroup1_1"
+						/>Air Conditioning</label
+					>
+				</div>
+				<div>
+					<label
+						><input
+							type="checkbox"
+							name="CheckboxGroup1"
+							value="minibar"
+							id="CheckboxGroup1_2"
+						/>Minibar</label
+					>
+				</div>
+				<div>
+					<label
+						><input
+							type="checkbox"
+							name="CheckboxGroup1"
+							value="car"
+							id="CheckboxGroup1_3"
+						/>Car rent</label
+					>
+				</div>
+				<div>
+					<label
+						><input
+							type="checkbox"
+							name="CheckboxGroup1"
+							value="sauna"
+							id="CheckboxGroup1_4"
+						/>Sauna</label
+					>
+				</div>
+			</div>
+			<div class="clear">
+				<p>
+					<input
+						type="button"
+						name="button"
+						id="button"
+						value="Reserve"
+						onclick="getData()"
+					/>
+				</p>
+			</div>
 		</section>
 
 		<script src="ws6-scripts/ws6-ext1.js"></script>

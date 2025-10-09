@@ -11,7 +11,7 @@
 		<link rel="manifest" href="/site.webmanifest">
 	</head>
 	<body>
-		<h1>Workshop 4: Exercise 4: TITLE</h1>
+		<h1>Workshop 4: Exercise 4: Moving things around</h1>
 		<p><a href="index.html">Back to Workshop 4 index</a></p>
 
 		<section class="exerciseOutput" id="js-exerciseOutput">
@@ -19,10 +19,42 @@
 		</section>
 
 		<section>
-			<h2>ExerciseTitle</h2>
-			<p>
-				ExerciseDescription
-			</p>
+			<h2>Exercise 4: Moving things around</h2>
+			<ul>
+				<li>
+					<p class="surprise">
+						You can do neat things by editing CSS-rules via JavaScript. See the
+						examples in lecture slides. Then try these:
+					</p>
+					<ol>
+						<li>
+							<button onclick="changePosition()">Move!</button>Select the div with
+							an id &quot;carimage&quot; and move it 200px left and 500px down
+						</li>
+						<li>
+							<button onclick="setInterval(function(){doMove();},1000); ">
+								Animate
+							</button>
+							Write a funtion doMove() which will move the image across the
+							screen, or even better: back and forth on the screen. The Interval
+							required has already been added to the onclick -event of the list
+							item.
+						</li>
+						<li>
+							<button onclick="setInterval(function(){fadeOut();},250);">
+								Fade out!
+							</button>
+							Wite a function fadeOut() which will slowly decrease the opacity of
+							the image from 1.0 to 0 making it fade out. The Interval required
+							has already been added to the onclick -event of the list item
+						</li>
+						<li>
+							<button onclick="remove()">Disappear!</button>Finally, write
+							JavaScript which will remove the image from the page
+						</li>
+					</ol>
+				</li>
+			</ul>
 		</section>
 
 		<script src="ws4-scripts/ws4-ext4.js"></script>

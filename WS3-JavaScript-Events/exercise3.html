@@ -19,10 +19,33 @@
 		</section>
 
 		<section>
-			<h2>ExerciseTitle</h2>
-			<p>
-				ExerciseDescription
-			</p>
+		<h2>Exercise 3</h2>
+		<p>Below you will see a simple form.</p>
+		<ul>
+			<li>
+				Add onfocus -event to the&nbsp;textarea below. When the user enters the
+				textarea, it should show a text saying: "Please fill in the form with
+				proper data.". You can try modifying the background color of the box as
+				well. &nbsp;
+			</li>
+			<li>
+				Try to use onkeydown -event on the textarea. It should calculate the
+				number of keypresses and output them on the screen. Could you think
+				other smart ways to use it?
+			</li>
+			<li>
+				When the form button is clicked, check if the textarea is empty. Notify
+				the user with appropriate message. HINT: You can access the Textarea
+				using the following command:
+				<i>document.getElementById("textdata").value</i>. We will study the
+				forms deeper in Workshops 4 and 5.
+			</li>
+		</ul>
+		<form>
+			<textarea id="textdata"></textarea><br />
+			<span id="charcount"></span>
+			<button>Send me</button>
+		</form>
 		</section>
 
 		<script src="ws3-scripts/ws3-ext3.js"></script>

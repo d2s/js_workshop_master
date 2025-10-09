@@ -11,7 +11,7 @@
 		<link rel="manifest" href="/site.webmanifest">
 	</head>
 	<body>
-		<h1>Workshop 4: Exercise 5: TITLE</h1>
+		<h1>Workshop 4: Exercise 5: Tables</h1>
 		<p><a href="index.html">Back to Workshop 4 index</a></p>
 
 		<section class="exerciseOutput" id="js-exerciseOutput">
@@ -19,9 +19,73 @@
 		</section>
 
 		<section>
-			<h2>ExerciseTitle</h2>
+			<h2>Exercise 5: Tables</h2>
+			<ul>
+				<li class="surprise">
+					Write a JavaScript function to add rows to a table. Rows can contain
+					preset values.
+				</li>
+				<li>
+					When your code is working, try reading the content to be added from a
+					set of fields below the table.
+				</li>
+			</ul>
+			<br />
+			<table id="data" class="display">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Position</th>
+						<th>Salary</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Tiger Nixon</td>
+						<td>System Architect</td>
+						<td>$320,800</td>
+					</tr>
+					<tr>
+						<td>Garrett Winters</td>
+						<td>Accountant</td>
+						<td>$170,750</td>
+					</tr>
+					<tr>
+						<td>Ashton Cox</td>
+						<td>Junior Technical Author</td>
+						<td>$86,000</td>
+					</tr>
+					<tr>
+						<td>Cedric Kelly</td>
+						<td>Senior Javascript Developer</td>
+						<td>$433,060</td>
+					</tr>
+					<tr>
+						<td>Airi Satou</td>
+						<td>Accountant</td>
+						<td>$162,700</td>
+					</tr>
+				</tbody>
+				<tfoot></tfoot>
+			</table>
 			<p>
-				ExerciseDescription
+				Name
+				<label for="textfield">:</label>
+				<input type="text" name="textfield" id="textfield" />
+				<br />
+				Position:
+				<input type="text" name="textfield2" id="textfield2" />
+				<br />
+				Salary:
+				<input type="text" name="textfield3" id="textfield3" />
+				<br />
+				<input
+					type="button"
+					onclick="insertRows()"
+					name="Insert"
+					id="Insert"
+					value="Insert"
+				/>
 			</p>
 		</section>
 

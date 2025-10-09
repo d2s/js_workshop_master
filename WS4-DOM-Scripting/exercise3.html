@@ -11,7 +11,7 @@
 		<link rel="manifest" href="/site.webmanifest">
 	</head>
 	<body>
-		<h1>Workshop 4: Exercise 3: TITLE</h1>
+		<h1>Workshop 4: Exercise 3: Images and pulldowns</h1>
 		<p><a href="index.html">Back to Workshop 4 index</a></p>
 
 		<section class="exerciseOutput" id="js-exerciseOutput">
@@ -19,10 +19,42 @@
 		</section>
 
 		<section>
-			<h2>ExerciseTitle</h2>
-			<p>
-				ExerciseDescription
-			</p>
+			<h2>Exercise 3: Images and pulldowns</h2>
+			<ul>
+				<li>
+					Write a JavaScript function, which will fire when the pulldown menu item
+					is changed. Show the users choice using alert -box.
+				</li>
+				<li>
+					When the mouse is moved on top of the image, a colored border should
+					appear surrounding it. On mouse out, border should disappear
+				</li>
+				<li>
+					When you have accomplished the above, change the image
+					(id=&quot;carimage&quot;) below based on the users choice on the
+					pulldown menu below. Find appropriate images from the web.
+				</li>
+			</ul>
+
+			<p>Select a new car from the list.</p>
+			<select name="mySelect" id="mySelect" onchange="">
+				<option value="BMW">BMW</option>
+				<option value="Audi">Audi</option>
+				<option value="Mercedes">Mercedes</option>
+				<option value="Volvo">Volvo</option>
+			</select>
+
+			<br />
+			<br />
+			<img
+				alt=""
+				onmouseover=""
+				onmouseout=""
+				style="left: 0px; opacity: 1"
+				src="http://cdn.bmwblog.com/wp-content/uploads/2015/11/BMW-2-Series-Gran-Coupe-Rendering.jpg"
+				width="400"
+				id="carimage"
+			/>
 		</section>
 
 		<script src="ws4-scripts/ws4-ext3.js"></script>

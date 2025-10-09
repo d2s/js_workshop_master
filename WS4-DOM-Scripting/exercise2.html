@@ -11,7 +11,7 @@
 		<link rel="manifest" href="/site.webmanifest">
 	</head>
 	<body>
-		<h1>Workshop 4: Exercise 2: TITLE</h1>
+		<h1>Workshop 4: Exercise 2: DOM Traversing using ID's and classes</h1>
 		<p><a href="index.html">Back to Workshop 4 index</a></p>
 
 		<section class="exerciseOutput" id="js-exerciseOutput">
@@ -19,10 +19,59 @@
 		</section>
 
 		<section>
-			<h2>ExerciseTitle</h2>
+			<h2>Exercise 2: DOM Traversing using ID's and classes</h2>
+			<p class="surprise">Add onchange -events to following checkboxes.</p>
 			<p>
-				ExerciseDescription
+				<label>
+					<input
+						onchange="hide()"
+						name="CheckboxGroup1"
+						type="checkbox"
+						id="CheckboxGroup1_0"
+						title="Actions"
+						value="1"
+					/>
+					Hide me
+				</label>
+				<br />
+				<label>
+					<input
+						onchange="show()"
+						type="checkbox"
+						name="CheckboxGroup1"
+						value="2"
+						id="CheckboxGroup1_1"
+					/>
+					Show me
+				</label>
+				<br />
+				<label>
+					<input
+						type="checkbox"
+						name="CheckboxGroup1"
+						value="3"
+						id="CheckboxGroup1_2"
+					/>
+					<span id="surpise">Surprise</span>
+				</label>
 			</p>
+			<ul>
+				<li>
+					First checkbox: Find out which element has been described with the id
+					&quot;me&quot;. Change the visibility (display value) of the element to
+					none. What happens?
+				</li>
+				<li>
+					Second checkbox should return the visibility of the element to a normal
+					state (block).
+				</li>
+				<li>
+					Third checkbox should find the elements with class &quot;surprise&quot;
+					and change the font size to 20.
+				</li>
+			</ul>
+			<div id="me" class="red-box"></div>
+			<p>&nbsp;</p>
 		</section>
 
 		<script src="ws4-scripts/ws4-ext2.js"></script>
