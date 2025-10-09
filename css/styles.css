@@ -1,13 +1,253 @@
 /* Cascade layers order from lowest to highest priority */
 @layer reset, defaults, patterns, components, utilities, overrides;
 
+@layer reset {
+	/*
+		Reset layer styles based on example from Chris Coyier:
+		- https://frontendmasters.com/blog/the-coyier-css-starter/
+	*/
+	html {
+		color-scheme: light dark;
+		tab-size: 2;
+		hanging-punctuation: first allow-end last;
+		word-break: break-word;
+	}
+
+	body {
+		margin: 0;
+		padding: 2rem;
+		@media (width < 500px) {
+			padding: 1rem;
+		}
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	h1,
+	h2 {
+		font-weight: 900;
+		letter-spacing: -0.02rem;
+	}
+
+	h1,
+	h2,
+	h3 {
+		line-height: 1.1;
+	}
+
+	h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 /* FUTURE :heading */ {
+		text-wrap: balance;
+		margin-block-start: 0;
+	}
+
+	p,
+	li,
+	dd {
+		text-wrap: pretty;
+		max-inline-size: 88ch;
+	}
+
+	a {
+		color: oklch(0.68 0.17 228);
+		text-underline-offset: 2px;
+		&:not(:is(:hover, :focus)) {
+			text-decoration-color: color-mix(in srgb, currentColor, transparent 50%);
+		}
+	}
+
+	sub,
+	sup {
+		font-size: 75%;
+		line-height: 0;
+		position: relative;
+		vertical-align: baseline;
+	}
+	sub {
+		inset-block-end: -0.25em;
+	}
+	sup {
+		inset-block-start: -0.5em;
+	}
+
+	ul,
+	ol,
+	dl {
+		margin: 0;
+		padding: 0;
+		list-style-position: inside;
+		ul,
+		ol,
+		dl {
+			padding-inline-start: 2ch;
+		}
+	}
+
+	img,
+	video,
+	iframe {
+		display: block;
+		max-inline-size: 100%;
+		block-size: auto;
+		border-style: none;
+	}
+
+	figure {
+		inline-size: fit-content;
+		margin-inline: auto;
+	}
+	figcaption {
+		contain: inline-size;
+	}
+
+	/* Form styles */
+	input,
+	select,
+	textarea,
+	button {
+		font: inherit;
+		/* FUTURE: appearance: base; */
+	}
+
+	label {
+		display: block;
+	}
+
+	input:not(
+			:where(
+					[type="submit"],
+					[type="checkbox"],
+					[type="radio"],
+					[type="button"],
+					[type="reset"]
+				)
+		) {
+		inline-size: 100%;
+	}
+
+	button,
+	input:where([type="submit"], [type="reset"], [type="button"]) {
+		background: CanvasText;
+		color: Canvas;
+		border: 1px solid transparent;
+	}
+
+	textarea {
+		field-sizing: content;
+		min-block-size: 5lh;
+		inline-size: 100%;
+		max-inline-size: 100%;
+	}
+
+	pre,
+	code,
+	kbd,
+	samp {
+		font-family: ui-monospace, SFMono-Regular, monospace;
+	}
+	pre {
+		white-space: pre-wrap;
+		background: CanvasText;
+		color: Canvas;
+		padding: 1.5rem;
+	}
+
+	svg {
+		fill: currentColor;
+	}
+
+	[aria-disabled="true" i],
+	[disabled] {
+		cursor: not-allowed;
+	}
+	[disabled],
+	label:has(input[disabled]) {
+		opacity: 0.5;
+
+		[disabled] {
+			opacity: 1;
+		}
+	}
+
+	hr {
+		border-style: solid;
+		border-width: 1px 0 0;
+		color: inherit;
+		height: 0;
+		overflow: visible;
+		margin-block: 2.5rem;
+	}
+
+	:target {
+		scroll-margin: 3rlh;
+	}
+
+	table {
+		caption-side: bottom;
+		border-collapse: collapse;
+		td {
+			font-size: 90%;
+		}
+		td,
+		th {
+			word-break: normal;
+			border: 1px solid gray;
+			padding: 0.5rem;
+		}
+	}
+	[role="region"][aria-labelledby][tabindex] {
+		overflow: auto;
+	}
+	caption {
+		font-size: 90%;
+	}
+
+	/* Accessibility improvements */
+	[hidden] {
+		display: none !important;
+	}
+	.screenreader-only:not(:focus):not(:active) {
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
+	:focus-visible {
+		outline-offset: 2px;
+	}
+
+	/* Motion-related adjustments */
+	@media (prefers-reduced-motion: no-preference) {
+		@view-transition {
+			navigation: auto;
+		}
+
+		html {
+			interpolate-size: allow-keywords;
+			&:focus-within {
+				scroll-behavior: smooth;
+			}
+		}
+	}
+}
+
 @layer defaults {
 	body {
 		font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua,
 			Georgia, serif;
 		color: #000;
 		background-color: #fff;
-		margin: 20px;
 		font-size: 20px;
 		line-height: 1.6;
 	}
@@ -16,7 +256,6 @@
 		font-size: 32px;
 		font-style: normal;
 		font-variant: normal;
-		font-weight: 700;
 	}
 
 	h3 {
@@ -59,7 +298,7 @@
 		font-variant: normal;
 		font-weight: 400;
 		font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-			Liberation Mono, Courier New, 'Courier New', Courier, monospace;
+			Liberation Mono, Courier New, "Courier New", Courier, monospace;
 
 		p {
 			margin-block-start: 0;
@@ -97,12 +336,20 @@
 	/* Output wrapper for assignments */
 	section.exerciseOutput {
 		background-color: #f2f2f2;
-		padding: 3ex 2ex;
 		box-shadow: inset 0 0 2ex rgba(0, 0, 0, 0.06);
-		border-left: 2px solid #1966a2;
-		border-right: 2px solid #1966a2;
-		margin-left: -2ex;
-		margin-right: -2ex;
+		border-left: 0.3ex solid #1966a2;
+		border-right: 0.3ex solid #1966a2;
+
+		padding: 3ex 3ex;
+		margin-left: -2rem;
+		margin-right: -2rem;
+
+		@media (width < 500px) {
+			border: 0;
+			padding: 3ex 2ex;
+			margin-left: -1rem;
+			margin-right: -1rem;
+		}
 	}
 
 	.red-box {
