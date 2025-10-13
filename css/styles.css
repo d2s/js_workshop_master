@@ -60,7 +60,11 @@
 	}
 
 	a {
-		color: oklch(0.50 0.17 228);
+		/*
+			Color adjustments
+			- https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch
+		*/
+		color: light-dark( oklch(35% 0.12017 227.292), oklch(86% 0.12017 227.292));
 		text-underline-offset: 2px;
 		&:not(:is(:hover, :focus)) {
 			text-decoration-color: color-mix(in srgb, currentColor, transparent 50%);
