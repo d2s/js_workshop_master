@@ -1,16 +1,17 @@
 /* Workshop 3 */
 .ws3 {
-	div {
+	/* Disabled div style because it conflicts with the style switcher */
+	/* div {
 		width: 200px;
 		height: 100px;
 		border: 1px solid black;
-	}
+	} */
 
 	table,
 	tr,
 	td {
-		margin: 10px;
-		padding: 10px;
+		margin: 1ex;
+		padding: 1ex;
 	}
 
 	table,

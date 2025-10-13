@@ -8,12 +8,15 @@
 	*/
 	html {
 		color-scheme: light dark;
+		block-size: 100%;
+		scrollbar-color: color-mix(in srgb, CanvasText, #0000 50%) #0000;
 		tab-size: 2;
 		hanging-punctuation: first allow-end last;
 		word-break: break-word;
 	}
 
 	body {
+		min-block-size: 100%;
 		margin: 0;
 		padding: 2rem;
 		@media (width < 500px) {
@@ -135,8 +138,8 @@
 
 	button,
 	input:where([type="submit"], [type="reset"], [type="button"]) {
-		/* background: CanvasText; */
-		/* color: Canvas; */
+		background: CanvasText;
+		color: Canvas;
 		border: 1px solid transparent;
 		border-radius: 0.3ex;
 	}
@@ -154,10 +157,13 @@
 	samp {
 		font-family: ui-monospace, SFMono-Regular, monospace;
 	}
+
 	pre {
 		white-space: pre-wrap;
-		background: CanvasText;
-		color: Canvas;
+		/* background: CanvasText;
+		color: Canvas; */
+		background-color: light-dark(#eee, #111);
+		color: light-dark(black, white);
 		padding: 1.5rem;
 	}
 
@@ -244,11 +250,37 @@
 }
 
 @layer defaults {
+	:root {
+		color-scheme: light dark;
+	}
+
+	html {
+		/*
+			Color theme switcher
+			- https://cascadiajs-2025.netlify.app/06-color-scheme/
+			- https://codepen.io/argyleink/pres/QwjPWGe?editors=1100
+			- https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark
+		*/
+		&:has(#optionAuto:checked) {
+			color-scheme: light dark;
+		}
+		&:has(#optionLight:checked) {
+			color-scheme: light;
+		}
+		&:has(#optionDark:checked) {
+			color-scheme: dark;
+		}
+	}
+
 	body {
+		min-block-size: 100%;
+		/* display: grid; */
+    /* place-content: center; */
 		font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua,
 			Georgia, serif;
-		color: #000;
-		background-color: whitesmoke;
+		/* font-family: system-ui, sans-serif; */
+		color: light-dark(#000, white);
+		background: light-dark(whitesmoke, black);
 		font-size: 20px;
 		line-height: 1.6;
 	}
@@ -277,8 +309,8 @@
 		margin: 0;
 		padding: 2ex 2ex 1.3ex;
 		max-width: 50ex;
-		background-color: antiquewhite;
-		color: black;
+		background-color: light-dark(antiquewhite, #000);
+		color: light-dark(black, white);
 		display: grid;
 		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 			sans-serif;
@@ -341,10 +373,20 @@
 @layer components {
 	/* Output wrapper for assignments */
 	section.exerciseOutput {
-		background-color: #f2f2f2;
-		box-shadow: inset 0 0 2ex rgba(0, 0, 0, 0.06);
-		border-left: 0.3ex solid #1966a2;
-		border-right: 0.3ex solid #1966a2;
+		--exerciseOutput-horizontal-border-size: 0.2ex;
+		--exerciseOutput-horizontal-border-color: light-dark(#ddd, #333);
+
+		--exerciseOutput-vertical-border-size: 0.3ex;
+		--exerciseOutput-vertical-border-color: #1966a2;
+
+		background-color: light-dark(#f2f2f2, #111);
+		color: light-dark(black, white);
+		box-shadow: inset 0 0 2ex light-dark(rgb(0 0 0 / 0.06), rgb(255 255 255 / 0.06));
+
+		border-top: var(--exerciseOutput-horizontal-border-size) solid var(--exerciseOutput-horizontal-border-color);
+		border-bottom: var(--exerciseOutput-horizontal-border-size) solid var(--exerciseOutput-horizontal-border-color);
+		border-left: var(--exerciseOutput-vertical-border-size) solid var(--exerciseOutput-vertical-border-color);
+		border-right: var(--exerciseOutput-vertical-border-size) solid var(--exerciseOutput-vertical-border-color);
 
 		padding: 3ex 3ex;
 		margin-left: -2rem;
@@ -381,6 +423,31 @@
 	table.display {
 		width: 100%;
 	}
+
+	/*
+		Color theme switcher
+		- https://cascadiajs-2025.netlify.app/06-color-scheme/
+		- https://codepen.io/argyleink/pres/QwjPWGe?editors=1100
+		- https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark
+	*/
+	.color-theme-switcher {
+		max-width: 12em;
+	}
+
+	.color-theme-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    place-items: center;
+    gap: .5ch 1ch;
+
+    > input {
+      grid-column: 1;
+    }
+
+    > label {
+      grid-column: 2;
+    }
+  }
 }
 
 @layer utilities {
