@@ -17,80 +17,111 @@
 			<p><a href="index.html">Back to Workshop 3 index</a></p>
 		</header>
 
+		<section>
+			<h2>Control elements</h2>
+			<p>
+				<button onclick="showAlertDialog()">Alert!</button>
+				<button onclick="showOhNo()">“oh no!”</button>
+				<button onclick="showTable()">Show table</button>
+				<button>Geolocation</button>
+			</p>
+		</section>
+
 		<section class="exerciseOutput" id="js-exerciseOutput">
 			output
 		</section>
 
 		<section>
-		<h2>Exercise 1</h2>
-		<p>
-			Below you will see three buttons. Edit the source code and add an
-			onClick-events to these buttons.
-		</p>
-		<p>
-			<button>Click me</button>
-			<button>Show table</button>
-			<button>Geolocation</button>
-		</p>
+			<h2>Exercise 1</h2>
+			<p>
+				Below you will see three buttons. Edit the source code and add an
+				onClick-events to these buttons.
+			</p>
 
-		<ol>
-			<li>
-				The first button should open an alert-button, which will say "You
-				clicked me!"
-			</li>
-			<li>
-				When you see the button working, add the current date after the text by
-				using the Date() -function.
-			</li>
-			<li>
-				The second button should call a function called showTable()". ShowTable
-				function should output a simple HTML-table (below) to the page. Use
-				document.write to print data. Feel free to modify the data on the table.
-			</li>
-		</ol>
-		<table id="example" class="display">
-			<thead>
-				<tr>
-					<th>Name</th>
-					<th>Position</th>
-					<th>Salary</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Tiger Nixon</td>
-					<td>System Architect</td>
-					<td>$320,800</td>
-				</tr>
-				<tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>$170,750</td>
-				</tr>
-				<tr>
-					<td>Ashton Cox</td>
-					<td>Junior Technical Author</td>
-					<td>$86,000</td>
-				</tr>
-				<tr>
-					<td>Cedric Kelly</td>
-					<td>Senior Javascript Developer</td>
-					<td>$433,060</td>
-				</tr>
-				<tr>
-					<td>Airi Satou</td>
-					<td>Accountant</td>
-					<td>$162,700</td>
-				</tr>
-			</tbody>
-		</table>
-		<ol start="4">
-			<li>
-				The last button should check Geolocation of the user, and output it to
-				the console and to the page. Note: Some browsers might not allow you to
-				do this. Try different browsers if you get errors.
-			</li>
-		</ol>
+			<!--
+			<p>
+				<button>Click me</button>
+				<button>Show table</button>
+				<button>Geolocation</button>
+			</p>
+			-->
+
+			<ol>
+				<li>
+					The first button should open an alert-button, which will say "You
+					clicked me!"
+				</li>
+				<li>
+					When you see the button working, add the current date after the text by
+					using the Date() -function.
+				</li>
+				<li>
+					The second button should call a function called showTable()". ShowTable
+					function should output a simple HTML-table (below) to the page. Use
+					document.write to print data. Feel free to modify the data on the table.
+				</li>
+			</ol>
+			<table id="example" class="display">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Position</th>
+						<th>Salary</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Tiger Nixon</td>
+						<td>System Architect</td>
+						<td>$320,800</td>
+					</tr>
+					<tr>
+						<td>Garrett Winters</td>
+						<td>Accountant</td>
+						<td>$170,750</td>
+					</tr>
+					<tr>
+						<td>Ashton Cox</td>
+						<td>Junior Technical Author</td>
+						<td>$86,000</td>
+					</tr>
+					<tr>
+						<td>Cedric Kelly</td>
+						<td>Senior Javascript Developer</td>
+						<td>$433,060</td>
+					</tr>
+					<tr>
+						<td>Airi Satou</td>
+						<td>Accountant</td>
+						<td>$162,700</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol start="4">
+				<li>
+					The last button should check Geolocation of the user, and output it to
+					the console and to the page. Note: Some browsers might not allow you to
+					do this. Try different browsers if you get errors.
+				</li>
+			</ol>
+		</section>
+
+		<section>
+			<!-- Theme switcher -->
+			<fieldset class="color-theme-switcher">
+				<legend>Theme</legend>
+
+				<div class="color-theme-list">
+					<input checked type="radio" id="optionAuto" name="choice" value="0">
+					<label for="optionAuto">Auto</label>
+
+					<input type="radio" id="optionLight" name="choice" value="1">
+					<label for="optionLight">Light</label>
+
+					<input type="radio" id="optionDark" name="choice" value="2">
+					<label for="optionDark">Dark</label>
+				</div>
+			</fieldset>
 		</section>
 
 		<script src="ws3-scripts/ws3-ext1.js"></script>
