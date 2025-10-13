@@ -13,6 +13,19 @@
 		tab-size: 2;
 		hanging-punctuation: first allow-end last;
 		word-break: break-word;
+		overflow-y: scroll;
+	}
+
+	/*
+		Stable Scrollbar Gutters
+		- https://www.zachleat.com/web/stable-scrollbar-gutters/
+		- https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter
+	*/
+	@supports (scrollbar-gutter: stable) {
+		html {
+			overflow-y: auto;
+			scrollbar-gutter: stable;
+		}
 	}
 
 	body {
