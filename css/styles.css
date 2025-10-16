@@ -292,7 +292,7 @@
 	body {
 		min-block-size: 100%;
 		/* display: grid; */
-    /* place-content: center; */
+		/* place-content: center; */
 		font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua,
 			Georgia, serif;
 		/* font-family: system-ui, sans-serif; */
