@@ -20,15 +20,16 @@
 		<section>
 			<h2>Control elements</h2>
 			<p>
-				<button onclick="showAlertDialog()">Alert!</button>
-				<button onclick="showOhNo()">“oh no!”</button>
-				<button onclick="showTable()">Show table</button>
-				<button>Geolocation</button>
+				<button id="js-showAlertButton">Alert!</button>
+				<button id="js-showOhNoButton" onclick="showOhNo()">“oh no!”</button>
+				<button id="js-tableButton">Show table</button>
+				<button id="js-geolocationButton">Geolocation</button><br />
 			</p>
 		</section>
 
-		<section class="exerciseOutput" id="js-exerciseOutput">
-			output
+		<section class="exerciseOutput">
+			<output id="js-exerciseOutput">
+			</output>
 		</section>
 
 		<section>
