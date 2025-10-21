@@ -1,10 +1,10 @@
-// --------------------------------------------------------
+// -----------------------------------------
 /**
  * Output element for the functions.
  */
 const output = document.querySelector("#js-exerciseOutput");
 
-// --------------------------------------------------------
+// -----------------------------------------
 /**
  * alert() dialog generation.
  */
@@ -16,7 +16,7 @@ function showAlert() {
 	alert(textAlert + Date());
 }
 
-// --------------------------------------------------------
+// -----------------------------------------
 /**
  * Generative text output: “oh no!”
  */
@@ -26,7 +26,7 @@ function showOhNo() {
 	output.append(textOhNo);
 }
 
-// --------------------------------------------------------
+// -----------------------------------------
 /**
  * Table output generation.
  *
@@ -94,7 +94,7 @@ function createAndPopulateTable(people) {
   output.appendChild(table);
 }
 
-// --------------------------------------------------------
+// -----------------------------------------
 /**
  * Geolocation in a web browser environment.
  *
@@ -155,8 +155,12 @@ function geolocateMe() {
   }
 }
 
-// --------------------------------------------------------
+// -----------------------------------------
 // Add event listeners to the control buttons.
+//
+// - https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+// - https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events
+// - https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event
 
 document.querySelector("#js-showAlertButton").addEventListener("click", showAlert);
 document.querySelector("#js-showOhNoButton").addEventListener("click", showOhNo);
