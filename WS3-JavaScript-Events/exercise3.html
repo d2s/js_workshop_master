@@ -18,6 +18,34 @@
 		</header>
 
 		<section class="exerciseOutput">
+			<section>
+				<h2>Control elements</h2>
+
+				<!---
+					Required form elements
+
+					- Required fields should be marked visibly on the page.
+						https://www.nngroup.com/articles/required-fields/
+					- Minimum string length
+						https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/minlength
+					- Maximum string length
+						https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/maxlength
+				--->
+				<form>
+					<p>
+						<!-- TODO: Make this label visible when textarea:focus is active! -->
+						<label for="js-example-textarea" hidden>Required textarea (300 characters maximum length)</label>
+						<textarea id="js-example-textarea" name="example-textarea" rows="3" minlength="1" maxlength="300" required></textarea>
+						<output id="js-example-textarea-charcountOutput">
+							<span id="js-example-textarea-charcount-amount">0 characters</span><br>
+							<p id="js-example-warning" class="warning" hidden>You must have more than 0 characters on the textarea before it can be sent.</p>
+							<p id="js-example-success" class="success" hidden>Thank you for the feedback!</p>
+						</output>
+					</p>
+					<button id="js-example-send-button" type="button" name="sendButton">Send me</button>
+					<!-- <input id="js-example-submit" type="submit" name="submit" value="Send me" /> -->
+				</form>
+			</section>
 			<output id="js-exerciseOutput">
 			</output>
 		</section>

@@ -23,4 +23,69 @@
 		border-collapse: collapse;
 		padding: 5px;
 	}
+
+	/*
+		Form elements
+
+		- https://developer.mozilla.org/en-US/docs/Web/CSS/:focus
+	*/
+	label,
+	.warning,
+	.success {
+		--label-spacing: 0.5ex;
+
+		display: block;
+		margin-block-end: var(--label-spacing);
+		padding-block-start: var(--label-spacing);
+		padding-block-end: var(--label-spacing);
+		padding-inline: calc(var(--label-spacing) * 3);
+		background-color: Highlight;
+		color: HighlightText;
+		font-weight: 600;
+		letter-spacing: 0.015ch;
+		/*
+			- Make sure that smaller labels are consistent with each other.
+		*/
+		min-width: 10ch;
+    text-align: center;
+	}
+
+	textarea {
+		--textarea-spacing: 0.5ex;
+
+		margin-block-start: 0;
+		margin-block-end: var(--textarea-spacing);
+		padding-block-start: var(--textarea-spacing);
+		padding-block-end: var(--textarea-spacing);
+		padding-inline: calc(var(--textarea-spacing) * 3);
+	}
+
+	textarea:focus {
+		background-color: Highlight;
+		color: HighlightText;
+		font-weight: 600;
+	}
+
+	button {
+		font-weight: 600;
+		letter-spacing: 0.045ch;
+	}
+
+	button:focus,
+	button:hover {
+		background-color: Highlight;
+		color: HighlightText;
+	}
+
+	/* Notification: Warning */
+	.warning {
+		font-weight: normal;
+	}
+
+	/* Notification: Successful form completion */
+	.success {
+		font-weight: normal;
+		background-color: inherit;
+		color: inherit;
+	}
 }
