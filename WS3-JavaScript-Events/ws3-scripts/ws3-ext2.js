@@ -4,6 +4,16 @@
 const output = document.querySelector("#js-exerciseOutput");
 
 /**
+ * Shorter name for the top level heading
+ */
+const headerHeading = document.querySelector("#js-headerHeading");
+
+/**
+ * Shorter name for the exercise heading
+ */
+const exerciseHeading = document.querySelector("#js-exerciseHeading");
+
+/**
  * Reusable text output function.
  *
  * @param {String} outputTextContents
@@ -42,9 +52,9 @@ function pointerLeaveAction() {
 // - https://developer.mozilla.org/en-US/docs/Web/API/Element/pointerleave_event
 
 // Top level heading on the page header
-// document.querySelector("#js-headerHeading").addEventListener("pointerenter", pointerEnterAction);
-// document.querySelector("#js-headerHeading").addEventListener("pointerleave", pointerLeaveAction);
+// headerHeading.addEventListener("pointerenter", pointerEnterAction);
+// headerHeading.addEventListener("pointerleave", pointerLeaveAction);
 
 // Exercise heading
-document.querySelector("#js-exerciseHeading").addEventListener("pointerenter", pointerEnterAction);
-document.querySelector("#js-exerciseHeading").addEventListener("pointerleave", pointerLeaveAction);
+exerciseHeading.addEventListener("pointerenter", pointerEnterAction);
+exerciseHeading.addEventListener("pointerleave", pointerLeaveAction);
